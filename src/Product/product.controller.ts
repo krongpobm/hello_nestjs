@@ -14,14 +14,14 @@ export class ProductController {
     }
 
     @Post()
-    postproducts(@Body("name")name:string, @Body("lastname") lastname:string){
-        this.productService.addProduct(name,lastname)
+    postproducts(@Body("ProductCode")ProductCode:string, @Body("ProductName") ProductName:string){
+        this.productService.addProduct(ProductCode,ProductName)
     }
 
     @Delete("/:id")
     deleteProductById(@Param("id") id:string){
         console.log(`id: ${id}`)
-        return `id is ${id}`
+        return this.productService.removeProductById(id)
     }
 }
 

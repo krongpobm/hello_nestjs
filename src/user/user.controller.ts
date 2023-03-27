@@ -10,17 +10,17 @@ export class UserController {
 
     @Get()
     getUsers(){
-        return ["Hello World"]
+        return this.UserService.getUser()
     }
 
     @Post()
-    postUsers(@Body("Username") Username:string, @Body("Lastname") lastname:string){
-        console.log(`name: ${name}, lastname: ${lastname}`)
+    postUsers(@Body("Username") Username:string, @Body("Lastname") Lastname:string, @Body("Gmail") Gmail:string, @Body("Iduser") Iduser:string){
+        this.UserService.addUser(Username,Lastname,Gmail,Iduser)
         }
 
     @Delete("/:id")
     DeleteUserById(@Param("id") id:string){
         console.log(`id: ${id}`)
-        return (`id is ${id}`)
+        return this.UserService.removeUserById(id)
     }
 }
