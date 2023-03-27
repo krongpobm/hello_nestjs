@@ -4,9 +4,8 @@ import { AppService } from './app.service';
 import { TodoModule } from './todo/todo.module';  
 import { ProductModule } from './product/product.module';
 import { UserModule } from './User/user.module';
-import { ProjectModule } from './project/project.module';
 @Module({
-  imports: [TodoModule, ProductModule, UserModule, ProjectModule,],
+  imports: [TodoModule, ProductModule, UserModule,],
   controllers: [AppController],
   providers: [AppService],
 })
