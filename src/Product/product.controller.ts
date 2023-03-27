@@ -14,7 +14,7 @@ export class ProductController {
     }
 
     @Post()
-    postproducts(@Body("name") name:string, @Body("lastname") lastname:string){
+    postproducts(@Body("name")name:string, @Body("lastname") lastname:string){
         this.productService.addProduct(name,lastname)
     }
 
