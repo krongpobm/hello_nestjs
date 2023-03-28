@@ -2,6 +2,7 @@ export class User{
      id:string
      Username:string
      Lastname:string 
-     Gmail:string
+     Email:string
      Iduser:string
+     Password:string
 }

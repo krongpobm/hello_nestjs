@@ -14,8 +14,8 @@ export class UserController {
     }
 
     @Post()
-    postUsers(@Body("Username") Username:string, @Body("Lastname") Lastname:string, @Body("Gmail") Gmail:string, @Body("Iduser") Iduser:string){
-        this.UserService.addUser(Username,Lastname,Gmail,Iduser)
+    postUsers(@Body("Username") Username:string, @Body("Lastname") Lastname:string, @Body("Email") Email:string, @Body("Iduser") Iduser:string, @Body("Password") Password:string){
+        this.UserService.addUser(Username,Lastname,Email,Iduser,Password)
         }
 
     @Delete("/:id")

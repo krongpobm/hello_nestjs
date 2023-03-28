@@ -7,14 +7,15 @@ export class UserService {
     userArray:User[] = []
 
 
-    addUser(Username:string, Lastname:string, Gmail:string, Iduser:string): void{
-    console.log(`Username: ${Username}, Lastname: ${Lastname}, Gmail: ${Gmail}, Iduser: ${Iduser}`)
+    addUser(Username:string, Lastname:string, Email:string, Iduser:string, Password:string): void{
+    console.log(`Username: ${Username}, Lastname: ${Lastname}, Email: ${Email}, Iduser: ${Iduser}, Password: ${Password}`)
     const user = new User();
     user.id = uuid();
     user.Username = Username;
     user.Lastname = Lastname;
-    user.Gmail = Gmail;
+    user.Email = Email;
     user.Iduser = Iduser;
+    user.Password = Password;
     this.userArray.push(user) 
     }
     getUser(){
